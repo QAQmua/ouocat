@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iOS Style Phone Frame</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        background-color: #1f2937; /* bg-gray-800 */
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+       @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* iOS 风格的丝滑动画 */
+      @keyframes ios-pop {
+        0% { opacity: 0; transform: scale(0.85) translateY(20px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      @keyframes ios-fade {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      .animate-ios-pop {
+        animation: ios-pop 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .animate-ios-fade {
+        animation: ios-fade 0.4s ease-out forwards;
+      }
+
+      /* iOS 桌面编辑抖动动画 (Jiggle / Wiggle) */
+      @keyframes ios-jiggle {
+        0% { transform: rotate(-1.4deg); }
+        50% { transform: rotate(1.4deg); }
+        100% { transform: rotate(-1.4deg); }
+      }
+      @keyframes ios-jiggle-alt {
+        0% { transform: rotate(1.3deg); }
+        50% { transform: rotate(-1.3deg); }
+        100% { transform: rotate(1.3deg); }
+      }
+      .animate-jiggle {
+        animation: ios-jiggle 0.26s ease-in-out infinite;
+      }
+      .animate-jiggle-alt {
+        animation: ios-jiggle-alt 0.28s ease-in-out infinite;
+      }
+    </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

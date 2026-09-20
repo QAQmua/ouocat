@@ -1,0 +1,6 @@
+{
+  "name": "iOS Style Phone Frame",
+  "description": "A realistic iOS-style phone experience featuring home screen editing mode with drag-and-drop app stacking to create folders with custom naming, widget styling, position reordering, and dynamic island status indicators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
